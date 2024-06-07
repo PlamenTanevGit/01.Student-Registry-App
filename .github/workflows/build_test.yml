@@ -30,6 +30,8 @@ jobs:
 
   Integration-Tests:
     runs-on: ubuntu-latest
+    # NEEDS : Name of the job for GitHub UI NEEDS : npm-security-test
+    needs: npm-security-test
     strategy:
       matrix:
         node-version: [14.x, 16.x, 18.x]
